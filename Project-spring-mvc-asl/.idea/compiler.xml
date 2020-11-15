@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-mvc-maven-project" />
-        <module name="Project-spring-mvc-asl" />
         <module name="spring-mvc-project-asl" />
+        <module name="Project-spring-mvc-asl" />
+        <module name="spring-mvc-maven-project" />
       </profile>
     </annotationProcessing>
   </component>

@@ -15,7 +15,7 @@
 
 <body>
 <div class="container">
-    <form action="/spring_mvc_project_asl_war/login" method="post">
+    <form action="${context}/login" method="post">
         <div class="row justify-content-center my-5">
             <div class="col-md-5">
                 <div class="card card-default">
