@@ -67,7 +67,7 @@
                     <c:if test="${services.done eq false}">
                         <tr>
                             <td>${services.title}</td>
-                            <td>${services.category}</td>
+                            <td>${services.category.name}</td>
                             <td>${services.price}</td>
                             <td>
                                 <a href="${context}/service/${services.id}">consulter</a>

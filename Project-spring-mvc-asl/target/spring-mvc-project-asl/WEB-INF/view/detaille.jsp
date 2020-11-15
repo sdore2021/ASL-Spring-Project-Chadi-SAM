@@ -26,7 +26,7 @@
                     </div>
                         <div class="card card-body">
                             <h5 class="card-title">${service.title}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">${service.category}</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">${service.category.name}</h6>
                             <p class="card-text">${service.desc}</p>
                         </div>
                         <ul class="list-group list-group-flush">

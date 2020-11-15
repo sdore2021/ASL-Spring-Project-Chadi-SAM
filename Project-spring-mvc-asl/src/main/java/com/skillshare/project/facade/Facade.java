@@ -123,4 +123,9 @@ public class Facade implements FacadeInterface {
         userService.refund(service);
         jobService.delete(service);
     }
+
+    @Override
+    public List<Category> getAllCategory() {
+        return jobService.getAllCategories();
+    }
 }

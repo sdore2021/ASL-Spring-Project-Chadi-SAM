@@ -15,7 +15,7 @@
 
 <body>
 <div class="container">
-    <form action="/spring_mvc_project_asl_war/login" method="post">
+    <form action="${pageContext.request.contextPath}/login" method="post">
         <div class="row justify-content-center my-5">
             <div class="col-md-5">
                 <div class="card card-default">
@@ -25,7 +25,7 @@
                     <div class="card card-body">
                         <div class="form-group form-inline">
                             <label class="mr-2 my-1" for="email">Email :</label>
-                            <input type="text" name="email" id="email" placeholder="email" class="form-control ml-auto col-7" />
+                            <input type="text" name="email" id="email" placeholder="speudo" class="form-control ml-auto col-7" />
                         </div>
                         <div class="form-group form-inline">
                             <label class="mr-2 my-1" for="password">Password :</label>

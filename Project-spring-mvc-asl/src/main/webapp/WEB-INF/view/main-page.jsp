@@ -78,7 +78,7 @@
                                     <tr>
                                             <th scope="row">${services.provider.getUsername()}</th>
                                             <td>${services.title}</td>
-                                            <td>${services.category}</td>
+                                            <td>${services.category.name}</td>
                                             <td>${services.price}</td>
                                             <td>
                                                 <c:if test="${services.clients.size() < services.limit}">

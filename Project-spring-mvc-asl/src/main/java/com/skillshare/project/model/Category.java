@@ -18,6 +18,8 @@ public class Category {
     @OneToMany(fetch = FetchType.LAZY,mappedBy = "category",cascade = {CascadeType.ALL})
     private List<Service> services;
 
+    public Category() {}
+
     public Category(String name) {
         this.name = name;
     }

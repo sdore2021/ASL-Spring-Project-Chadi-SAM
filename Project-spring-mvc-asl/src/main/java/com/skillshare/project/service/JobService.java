@@ -2,7 +2,7 @@ package com.skillshare.project.service;
 
 import com.skillshare.project.model.Category;
 import com.skillshare.project.model.Service;
-import com.skillshare.project.model.User;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -13,5 +13,8 @@ public interface JobService {
     List<Service> findAll();
     Optional<Service> findById(int id);
     List<Service> findByTitle(String title);
+
+    //new code
+    List<Category> getAllCategories();
 }
 

@@ -23,4 +23,7 @@ public interface FacadeInterface {
     void approveService(int id);
     void buyService(int id) throws Exception;
     void deleteService(int id);
+
+    //new code
+    List<Category> getAllCategory();
 }

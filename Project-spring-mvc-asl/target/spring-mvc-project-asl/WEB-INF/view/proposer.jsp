@@ -29,6 +29,10 @@
                         <div class="form-group form-inline">
                             <label class="mr-2 my-1" for="category">Categorie :</label>
                             <select class="custom-select ml-auto col-7" id="category">
+                                <option selected>Choose...</option>
+                                <c:forEach var="category" items="${categories}">
+                                    <option value="${category.id}">${category.name}</option>
+                                </c:forEach>
                             </select>
                         </div>
                         <div class="form-group form-inline">

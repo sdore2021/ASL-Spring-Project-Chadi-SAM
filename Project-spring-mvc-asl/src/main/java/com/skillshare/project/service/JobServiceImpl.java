@@ -1,21 +1,22 @@
 package com.skillshare.project.service;
 
+import com.skillshare.project.dao.CategoryRepository;
 import com.skillshare.project.dao.ServiceRepository;
 import com.skillshare.project.model.Category;
-import com.skillshare.project.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
-import java.util.Set;
 
 @Service("JobService")
 public class JobServiceImpl implements JobService {
 
     @Autowired
     private ServiceRepository serviceRepository;
+
+    @Autowired
+    private CategoryRepository categoryRepository;
 
     @Override
     public com.skillshare.project.model.Service save(com.skillshare.project.model.Service service) {
@@ -46,6 +47,11 @@ public class JobServiceImpl implements JobService {
     @Override
     public List<com.skillshare.project.model.Service> findByTitle(String title) {
         return serviceRepository.findByTitleContains(title);
+    }
+
+    @Override
+    public List<com.skillshare.project.model.Category> getAllCategories() {
+        return (List<Category>) categoryRepository.findAll();
     }
 
 }

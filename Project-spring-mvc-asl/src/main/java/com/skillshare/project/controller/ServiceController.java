@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @Controller
 @RequestMapping("/service")
@@ -48,6 +50,9 @@ public class ServiceController {
     {
         Service service=new Service();
         model.addAttribute("service",service);
+
+        List<Category> categories = facade.getAllCategory();
+        model.addAttribute("categories",categories);
         return "proposer";
     }
 
