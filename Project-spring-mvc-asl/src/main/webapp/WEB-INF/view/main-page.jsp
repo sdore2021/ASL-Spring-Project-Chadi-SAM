@@ -56,7 +56,12 @@
                 <form method="post" class="form-inline my-2 my-lg-0" action="${context}/service/search">
                     <input class="form-control mr-sm-2" type="search" name="title" placeholder="Title" aria-label="Search">
                     <input class="form-control mr-sm-2" type="search" name="tags" placeholder="Tags" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <select class="custom-select ml-auto col-7" id="category" name="category">
+                        <c:forEach var="category" items="${categories}">
+                        <option value=${category.id}>${category.name}</option>
+                        </c:forEach>
+                    </select>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
             <div class="card-body">

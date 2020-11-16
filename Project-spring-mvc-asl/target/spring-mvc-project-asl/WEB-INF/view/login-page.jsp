@@ -16,6 +16,7 @@
 <body>
 <div class="container">
     <form action="${pageContext.request.contextPath}/login" method="post">
+    <form action="${context}/login" method="post">
         <div class="row justify-content-center my-5">
             <div class="col-md-5">
                 <div class="card card-default">

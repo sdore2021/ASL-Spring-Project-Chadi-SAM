@@ -15,15 +15,12 @@ public interface FacadeInterface {
     User banUser(String username) throws Exception;
     User unbanUser(String username);
     List<Service> getAllServices();
-    List<Service> getAvailableServices();
     Service getServiceById(int id);
     Service finishService(int id);
-    Service saveService(Service service);
-    List <Service> searchServices(String title, String tags, Category category);
+    Service saveService(Service service,int category);
+    List <Service> searchServices(String title, String tags, int category);
     void approveService(int id);
     void buyService(int id) throws Exception;
     void deleteService(int id);
-
-    //new code
     List<Category> getAllCategory();
 }

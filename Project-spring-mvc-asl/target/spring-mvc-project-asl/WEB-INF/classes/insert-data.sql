@@ -43,9 +43,9 @@ INSERT INTO users (email,password,points,role,username) VALUES ('moderer@insa-cv
 INSERT INTO users (email,password,points,role,username) VALUES ('admin@insa-cvl.fr','admin',30,'admin','admin');
 
 --insertion dans la table categories
-INSERT INTO category (id, name) values (1,'Cours particuliers'); -- pour coherant avec la table service
-INSERT INTO category (id, name) values (2,'Bricollage');
-INSERT INTO category (id, name) values (3,'Technologie');
+INSERT INTO category (name) values ('Cours particuliers'); -- pour coherant avec la table service
+INSERT INTO category (name) values ('Bricollage');
+INSERT INTO category (name) values ('Technologie');
 INSERT INTO category (name) values ('Sport');
 INSERT INTO category (name) values ('Autre');
 

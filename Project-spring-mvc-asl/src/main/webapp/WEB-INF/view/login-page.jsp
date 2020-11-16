@@ -15,11 +15,8 @@
 
 <body>
 <div class="container">
-<<<<<<< HEAD
     <form action="${pageContext.request.contextPath}/login" method="post">
-=======
     <form action="${context}/login" method="post">
->>>>>>> cbb6d7ea7c6f77a8de76f58f129fec9eae632848
         <div class="row justify-content-center my-5">
             <div class="col-md-5">
                 <div class="card card-default">

@@ -54,7 +54,7 @@ public class Service {
         this.done=false;
     };
 
-    public Service(String title,String desc,int price,int limit, String tags,User user) {
+    public Service(String title,String desc,int price,int limit, String tags,User user,Category category) {
         this.desc = desc;
         this.tags = tags;
         this.title=title;
@@ -63,6 +63,7 @@ public class Service {
         this.available=false;
         this.provider=user;
         this.done=false;
+        this.category=category;
     }
 
     public int getId() {

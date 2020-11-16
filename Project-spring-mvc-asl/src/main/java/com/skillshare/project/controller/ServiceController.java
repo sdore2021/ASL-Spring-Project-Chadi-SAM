@@ -22,13 +22,15 @@ public class ServiceController {
     public String ServiceList(Model model){
         model.addAttribute("services",facade.getAllServices());
         model.addAttribute("user",facade.getCurrentUser());
+        model.addAttribute("categories",facade.getAllCategory());
         return "main-page";
     }
 
     @PostMapping("/search")
-    public String searchServices(Model model,@RequestParam("title")String title,@RequestParam("tags")String tags){
-        model.addAttribute("services",facade.searchServices(title,tags,new Category("test")));
+    public String searchServices(Model model,@RequestParam("title")String title,@RequestParam("tags")String tags,@RequestParam("category")int category){
+        model.addAttribute("services",facade.searchServices(title,tags,category));
         model.addAttribute("user",facade.getCurrentUser());
+        model.addAttribute("categories",facade.getAllCategory());
         return "main-page";
     }
 
@@ -57,9 +59,9 @@ public class ServiceController {
     }
 
     @PostMapping("/create")
-    public String createService(@ModelAttribute("service")Service service)
+    public String createService(@ModelAttribute("service")Service service,@RequestParam("category")int category)
     {
-        facade.saveService(service);
+        facade.saveService(service,category);
         return "redirect:list";
     }
 

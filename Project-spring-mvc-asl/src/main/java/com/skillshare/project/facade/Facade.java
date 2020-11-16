@@ -1,5 +1,6 @@
 package com.skillshare.project.facade;
 
+import com.skillshare.project.dao.CategoryRepository;
 import com.skillshare.project.model.Category;
 import com.skillshare.project.model.Service;
 import com.skillshare.project.model.User;
@@ -20,6 +21,9 @@ public class Facade implements FacadeInterface {
 
     @Autowired
     JobService jobService;
+
+    @Autowired
+    CategoryRepository categoryRepository;
 
     @Override
     public User saveUser(User user) {
@@ -69,11 +73,6 @@ public class Facade implements FacadeInterface {
     }
 
     @Override
-    public List<Service> getAvailableServices() {
-        return this.getAllServices().stream().filter(s->s.isDone()==false).collect(Collectors.toList());
-    }
-
-    @Override
     public Service getServiceById(int id) {
         return jobService.findById(id).get();
     }
@@ -82,17 +81,18 @@ public class Facade implements FacadeInterface {
     public Service finishService(int id) {
         Service service=this.getServiceById(id);
         service.setDone(true);
-        return this.saveService(service);
-    }
-
-    @Override
-    public Service saveService(Service service) {
-        service.setProvider(this.getCurrentUser());
         return jobService.save(service);
     }
 
     @Override
-    public List<Service> searchServices(String title, String tags, Category category) {
+    public Service saveService(Service service,int category) {
+        service.setProvider(this.getCurrentUser());
+        service.setCategory(categoryRepository.findById(category).get());
+        return jobService.save(service);
+    }
+
+    @Override
+    public List<Service> searchServices(String title, String tags, int category) {
         List<Service> services=jobService.findByTitle(title);
         List<String> tagsList= Arrays.asList(tags.split(","));
         List<Service> result=new ArrayList<Service>();
@@ -101,7 +101,7 @@ public class Facade implements FacadeInterface {
                 if (s.getTags().contains(tag)) result.add(s);
             }
         }
-        return result;
+        return result.stream().filter(s->s.getCategory().getId()==category).collect(Collectors.toList());
     }
 
     @Override
