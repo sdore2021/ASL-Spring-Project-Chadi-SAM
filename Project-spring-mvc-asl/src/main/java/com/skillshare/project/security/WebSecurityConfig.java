@@ -47,7 +47,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers( "/register","/console/**","/user/create").permitAll()
                 .antMatchers("/service/moderation","/service/approve/*").hasAuthority("MOD")
-                .antMatchers("/user/list","/user/promote/*","/user/ban/*","/user/unban/*").hasAuthority("ADMIN")
+                .antMatchers("/user/list","/user/promote/*","/user/ban/*","/user/unban/*","/service/approve/*").hasAuthority("ADMIN")
                 .antMatchers("/service/**","/user/**").hasAnyAuthority("USER","MOD","ADMIN")
                 .anyRequest().authenticated()
                 .and()

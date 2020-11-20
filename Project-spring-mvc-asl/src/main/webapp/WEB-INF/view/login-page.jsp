@@ -25,8 +25,8 @@
                     </div>
                     <div class="card card-body">
                         <div class="form-group form-inline">
-                            <label class="mr-2 my-1" for="email">Email :</label>
-                            <input type="text" name="email" id="email" placeholder="speudo" class="form-control ml-auto col-7" />
+                            <label class="mr-2 my-1" for="email">Pseudo :</label>
+                            <input type="text" name="email" id="email" placeholder="Pseudo" class="form-control ml-auto col-7" />
                         </div>
                         <div class="form-group form-inline">
                             <label class="mr-2 my-1" for="password">Password :</label>
