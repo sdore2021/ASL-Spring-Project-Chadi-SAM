@@ -1,7 +1,3 @@
 # ASL-Spring-Project-Chadi-SAM
-le project de Spring
 
-#archecty maven-spring-mcv-webapp
-sous intellij
-la base de donnée H2 est installer /console
-un test de controller /test/page
+Afin d'accéder à la BD , veuillez se connecter avec cet url dans le panel H2 : jdbc:h2:mem:skillshare
