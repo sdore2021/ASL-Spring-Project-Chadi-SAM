@@ -56,7 +56,7 @@ INSERT INTO service (id,status,description,done,max,price,tags,title,category_id
 
 INSERT INTO service (id,status,description,done,max,price,tags,title,category_id,provider_id) values (3,false,'ce cours de chimie est destination des eleves du Bac, il traite de la chimie organique',FALSE,10,7,'bac,chimie','Cours de Chimie',1,'toto@insa-cvl.fr');
 
-INSERT INTO service (id,status,description,done,max,price,tags,title,category_id,provider_id) values (4,true,'mise à niveau des outils offices, bureautique de miscrosof office',FALSE,3,5,'word,excel','Cours d'Informatique',1,'sam@insa-cvl.fr');
+INSERT INTO service (id,status,description,done,max,price,tags,title,category_id,provider_id) values (4,true,'mise à niveau des outils offices, bureautique de miscrosof office',FALSE,3,5,'word,excel','Cours informatique',1,'sam@insa-cvl.fr');
 
 INSERT INTO service (id,status,description,done,max,price,tags,title,category_id,provider_id) values (5,false,'apprendre la programmer la reconnaissance faciale',FALSE,4,10,'IA,programmation','Formatique sur IA',2,'sam@insa-cvl.fr');
 
